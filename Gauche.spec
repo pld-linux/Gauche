@@ -1,12 +1,13 @@
-# $Id: Gauche.spec,v 1.2 2002-06-12 15:53:00 filon Exp $
+# $Id: Gauche.spec,v 1.3 2002-09-23 19:49:02 qrczak Exp $
 Summary:	Scheme script interpreter with multibyte character handling
 Summary:	Interpreter Scheme obs³uguj±cy wielobajtowe kodowanie znaków
 Name:		Gauche
 Version:	0.5.5
-Release:	1
+Release:	2
 License:	BSD
 Group:		Development/Languages
 Source0:	http://telia.dl.sourceforge.net/sourceforge/gauche/%{name}-%{version}.tgz
+Patch0:		%{name}-install.patch
 BuildRequires:	gdbm-devel >= 1.8.0
 BuildRequires:	slib
 Requires:	slib
@@ -54,6 +55,7 @@ Wi±zania do biblioteki GDBM dla Gauche.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %configure \
@@ -67,12 +69,16 @@ Wi±zania do biblioteki GDBM dla Gauche.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT
 
+echo "echo $RPM_BUILD_ROOT\$(sh $(pwd)/src/gauche-config \"\$@\")" >src/gauche-config-install
+
 %{__make} \
 	LIB_INSTALL_DIR=$RPM_BUILD_ROOT%{_libdir} \
 	BIN_INSTALL_DIR=$RPM_BUILD_ROOT%{_bindir} \
 	DATA_INSTALL_DIR=$RPM_BUILD_ROOT%{_datadir} \
 	GAUCHE_DATA_DIR=$RPM_BUILD_ROOT%{_datadir}/gauche \
 	GAUCHE_ARCH_DIR=$RPM_BUILD_ROOT%{_libdir}/gauche \
+	SCM_INSTALL_DIR=$RPM_BUILD_ROOT%{_datadir}/gauche/%{version}/lib \
+        GAUCHE_CONFIG="sh $(pwd)/src/gauche-config-install" \
 	install-rpm
 
 install -d $RPM_BUILD_ROOT%{_includedir}

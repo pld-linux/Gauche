@@ -1,0 +1,11 @@
+--- Gauche-0.5.5/Makefile.in~	Wed Apr 17 05:27:58 2002
++++ Gauche-0.5.5/Makefile.in	Mon Sep 23 21:38:27 2002
+@@ -57,7 +57,7 @@
+ 	cd src; $(MAKE) install
+ 	cd lib; $(MAKE) install
+ 	cd ext; $(MAKE) install
+-	$(INSTALL) -m 444 aclocal.m4 `sh src/gauche-config --ac`/aclocal.m4
++	$(INSTALL) -m 444 aclocal.m4 `sh src/gauche-config-install --ac`/aclocal.m4
+ 
+ realclean : clean
+ 	cd src; $(MAKE) realclean
