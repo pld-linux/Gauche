@@ -1,4 +1,4 @@
-# $Id: Gauche.spec,v 1.4 2002-12-02 22:08:27 ankry Exp $
+# $Id: Gauche.spec,v 1.4.2.1 2003-07-11 12:00:11 eothane Exp $
 Summary:	Scheme script interpreter with multibyte character handling
 Summary(pl):	Interpreter Scheme obs³uguj±cy wielobajtowe kodowanie znaków
 Name:		Gauche
