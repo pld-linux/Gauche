@@ -1,4 +1,3 @@
-# $Id: Gauche.spec,v 1.8 2003-08-06 11:28:50 qboosh Exp $
 Summary:	Scheme script interpreter with multibyte character handling
 Summary(pl):	Interpreter Scheme obs³uguj±cy wielobajtowe kodowanie znaków
 Name:		Gauche
@@ -10,6 +9,7 @@ Source0:	http://dl.sourceforge.net/gauche/%{name}-%{version}.tgz
 # Source0-md5:	8e2d65afc7669858557166568030d555
 Patch0:		%{name}-install.patch
 URL:		http://www.shiro.dreamhost.com/scheme/gauche/
+BuildRequires:	automake
 BuildRequires:	gdbm-devel >= 1.8.0
 BuildRequires:	slib
 Requires:	slib
@@ -107,9 +107,16 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/gosh
 %attr(755,root,root) %{_bindir}/gauche-config
 %attr(755,root,root) %{_libdir}/libgauche.so
+%dir %{_libdir}/gauche
+%dir %{_libdir}/gauche/%{version}
+%dir %{_libdir}/gauche/%{version}/*
 %attr(755,root,root) %{_libdir}/gauche/%{version}/*/*
 %exclude %attr(755,root,root) %{_libdir}/gauche/%{version}/*/[nog]dbm.so
+%dir %{_libdir}/gauche/site
+%dir %{_libdir}/gauche/site/%{version}
 %dir %{_libdir}/gauche/site/%{version}/*
+%dir %{_datadir}/gauche
+%dir %{_datadir}/gauche/%{version}
 %{_datadir}/gauche/%{version}/lib
 %exclude %{_datadir}/gauche/%{version}/lib/dbm*
 %dir %{_datadir}/gauche/site/lib
