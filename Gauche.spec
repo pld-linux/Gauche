@@ -1,4 +1,4 @@
-# $Id: Gauche.spec,v 1.7 2003-06-22 10:59:30 eothane Exp $
+# $Id: Gauche.spec,v 1.8 2003-08-06 11:28:50 qboosh Exp $
 Summary:	Scheme script interpreter with multibyte character handling
 Summary(pl):	Interpreter Scheme obs³uguj±cy wielobajtowe kodowanie znaków
 Name:		Gauche
@@ -6,13 +6,13 @@ Version:	0.5.5
 Release:	2
 License:	BSD
 Group:		Development/Languages
-Source0:	http://dl.sourceforge.net/sourceforge/gauche/%{name}-%{version}.tgz
+Source0:	http://dl.sourceforge.net/gauche/%{name}-%{version}.tgz
 # Source0-md5:	8e2d65afc7669858557166568030d555
 Patch0:		%{name}-install.patch
+URL:		http://www.shiro.dreamhost.com/scheme/gauche/
 BuildRequires:	gdbm-devel >= 1.8.0
 BuildRequires:	slib
 Requires:	slib
-URL:		http://www.shiro.dreamhost.com/scheme/gauche/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -92,7 +92,7 @@ install -d $RPM_BUILD_ROOT%{_aclocaldir}
 install aclocal.m4 $RPM_BUILD_ROOT%{_aclocaldir}/gauche.m4
 
 %clean
-rm -rf ${RPM_BUILD_ROOT}
+rm -rf $RPM_BUILD_ROOT
 
 %post
 # creates slib catalog, if possible.
