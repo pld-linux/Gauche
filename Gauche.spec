@@ -1,4 +1,4 @@
-# $Id: Gauche.spec,v 1.1 2002-06-12 15:49:03 filon Exp $
+# $Id: Gauche.spec,v 1.2 2002-06-12 15:53:00 filon Exp $
 Summary:	Scheme script interpreter with multibyte character handling
 Summary:	Interpreter Scheme obs³uguj±cy wielobajtowe kodowanie znaków
 Name:		Gauche
@@ -6,7 +6,7 @@ Version:	0.5.5
 Release:	1
 License:	BSD
 Group:		Development/Languages
-Source0:	%{name}-%{version}.tgz
+Source0:	http://telia.dl.sourceforge.net/sourceforge/gauche/%{name}-%{version}.tgz
 BuildRequires:	gdbm-devel >= 1.8.0
 BuildRequires:	slib
 Requires:	slib
