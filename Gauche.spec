@@ -1,6 +1,6 @@
-# $Id: Gauche.spec,v 1.3 2002-09-23 19:49:02 qrczak Exp $
+# $Id: Gauche.spec,v 1.4 2002-12-02 22:08:27 ankry Exp $
 Summary:	Scheme script interpreter with multibyte character handling
-Summary:	Interpreter Scheme obs³uguj±cy wielobajtowe kodowanie znaków
+Summary(pl):	Interpreter Scheme obs³uguj±cy wielobajtowe kodowanie znaków
 Name:		Gauche
 Version:	0.5.5
 Release:	2
@@ -26,8 +26,8 @@ Gauche jest interpreterem jêzyka Scheme zgodnym z "Revised^5 Report on
 Algorithmic Language Scheme". Jest on zaprojektowany do szybkiego
 tworzenia codziennych narzêdzi, jak zarz±dzania systemem lub
 przetwarzanie tekstu. Potrafi on obs³ugiwaæ natywnie wielobajtowe
-kodowanie znaków (jak na przyk³ad unicode). Ten pakiet jest skompilowany
-z utf-8 jako natywnym kodowaniem znaków.
+kodowanie znaków (jak na przyk³ad unicode). Ten pakiet jest
+skompilowany z utf-8 jako natywnym kodowaniem znaków.
 
 %package static
 Summary:	Static version of Gauche runtime libary
@@ -60,7 +60,7 @@ Wi±zania do biblioteki GDBM dla Gauche.
 %build
 %configure \
 	--enable-multibyte=utf-8 \
-	--with-slib=/usr/share/guile/slib \
+	--with-slib=%{_datadir}/guile/slib \
 	--with-pthread
 
 %{__make}
