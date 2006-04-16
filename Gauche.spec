@@ -34,7 +34,7 @@ skompilowany z utf-8 jako natywnym kodowaniem znaków.
 Summary:	Static version of Gauche runtime libary
 Summary(pl):	Statyczna wersja biblioteki czasu wykonania Gauche
 Group:		Development/Languages
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description static
 Static version of Gauche runtime libary.
@@ -46,7 +46,7 @@ Statyczna wersja biblioteki czasu wykonania Gauche.
 Summary:	Gauche bindings for GDBM library
 Summary(pl):	Wi±zania do biblioteki GDBM dla Gauche
 Group:		Development/Languages
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description dbm
 Gauche bindings for GDBM library.
