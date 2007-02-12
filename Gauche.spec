@@ -1,5 +1,5 @@
 Summary:	Scheme script interpreter with multibyte character handling
-Summary(pl):	Interpreter Scheme obs³uguj±cy wielobajtowe kodowanie znaków
+Summary(pl.UTF-8):   Interpreter Scheme obsÅ‚ugujÄ…cy wielobajtowe kodowanie znakÃ³w
 Name:		Gauche
 Version:	0.5.5
 Release:	2
@@ -22,37 +22,37 @@ daily tools like system management and text processing. It can handle
 multibyte character strings natively. This package is compiled with
 utf-8 as the native character encoding.
 
-%description -l pl
-Gauche jest interpreterem jêzyka Scheme zgodnym z "Revised^5 Report on
+%description -l pl.UTF-8
+Gauche jest interpreterem jÄ™zyka Scheme zgodnym z "Revised^5 Report on
 Algorithmic Language Scheme". Jest on zaprojektowany do szybkiego
-tworzenia codziennych narzêdzi, jak zarz±dzania systemem lub
-przetwarzanie tekstu. Potrafi on obs³ugiwaæ natywnie wielobajtowe
-kodowanie znaków (jak na przyk³ad unicode). Ten pakiet jest
-skompilowany z utf-8 jako natywnym kodowaniem znaków.
+tworzenia codziennych narzÄ™dzi, jak zarzÄ…dzania systemem lub
+przetwarzanie tekstu. Potrafi on obsÅ‚ugiwaÄ‡ natywnie wielobajtowe
+kodowanie znakÃ³w (jak na przykÅ‚ad unicode). Ten pakiet jest
+skompilowany z utf-8 jako natywnym kodowaniem znakÃ³w.
 
 %package static
 Summary:	Static version of Gauche runtime libary
-Summary(pl):	Statyczna wersja biblioteki czasu wykonania Gauche
+Summary(pl.UTF-8):   Statyczna wersja biblioteki czasu wykonania Gauche
 Group:		Development/Languages
 Requires:	%{name} = %{version}-%{release}
 
 %description static
 Static version of Gauche runtime libary.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna wersja biblioteki czasu wykonania Gauche.
 
 %package dbm
 Summary:	Gauche bindings for GDBM library
-Summary(pl):	Wi±zania do biblioteki GDBM dla Gauche
+Summary(pl.UTF-8):   WiÄ…zania do biblioteki GDBM dla Gauche
 Group:		Development/Languages
 Requires:	%{name} = %{version}-%{release}
 
 %description dbm
 Gauche bindings for GDBM library.
 
-%description dbm -l pl
-Wi±zania do biblioteki GDBM dla Gauche.
+%description dbm -l pl.UTF-8
+WiÄ…zania do biblioteki GDBM dla Gauche.
 
 %prep
 %setup -q
