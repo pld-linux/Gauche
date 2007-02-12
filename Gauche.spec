@@ -1,5 +1,5 @@
 Summary:	Scheme script interpreter with multibyte character handling
-Summary(pl.UTF-8):   Interpreter Scheme obsługujący wielobajtowe kodowanie znaków
+Summary(pl.UTF-8):	Interpreter Scheme obsługujący wielobajtowe kodowanie znaków
 Name:		Gauche
 Version:	0.5.5
 Release:	2
@@ -32,7 +32,7 @@ skompilowany z utf-8 jako natywnym kodowaniem znaków.
 
 %package static
 Summary:	Static version of Gauche runtime libary
-Summary(pl.UTF-8):   Statyczna wersja biblioteki czasu wykonania Gauche
+Summary(pl.UTF-8):	Statyczna wersja biblioteki czasu wykonania Gauche
 Group:		Development/Languages
 Requires:	%{name} = %{version}-%{release}
 
@@ -44,7 +44,7 @@ Statyczna wersja biblioteki czasu wykonania Gauche.
 
 %package dbm
 Summary:	Gauche bindings for GDBM library
-Summary(pl.UTF-8):   Wiązania do biblioteki GDBM dla Gauche
+Summary(pl.UTF-8):	Wiązania do biblioteki GDBM dla Gauche
 Group:		Development/Languages
 Requires:	%{name} = %{version}-%{release}
 
